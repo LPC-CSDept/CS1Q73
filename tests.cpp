@@ -14,14 +14,14 @@ TEST_CASE("Ex1 findMin() ", "[example]")
 
 	// makeArray(number, N);
 	printArray(number, N);
-	min = findMin(number, N);
+	findMin(number, N, 0);
 	printArray(number, N);
-	REQUIRE(min == 1);
+	REQUIRE(number[0] == 1);
 	cout << "--------------------------------------------------\n";
 
 	// REQUIRE(number[idx] == usernum);
 }
-TEST_CASE("Ex2 compareTwo() ", "[example]")
+TEST_CASE("Ex2 findmin() ", "[example]")
 {
 	const int N = 8;
 	// int number[N];
@@ -30,20 +30,31 @@ TEST_CASE("Ex2 compareTwo() ", "[example]")
 
 	// makeArray(number, N);
 	printArray(number, N);
-	step = 1;
-	compareTwo(number, N, step);
+	findMin(number, N, 0);
 	printArray(number, N);
+	REQUIRE(number[0] == 1);
 
-	REQUIRE(number[0] == 11);
-	REQUIRE(number[2] == 3);
-	REQUIRE(number[4] == 1);
-	REQUIRE(number[6] == 5);
-	// REQUIRE(number[idx] == usernum);
-
-	step = 2;
-	compareTwo(number, N, step);
+	findMin(number, N, 1);
 	printArray(number, N);
-	cout << "--------------------------------------------------\n";
-	REQUIRE(number[0] == 3);
-	REQUIRE(number[4] == 1);
+	REQUIRE(number[1] == 3);
+}
+TEST_CASE("Ex3 mySort() ", "[example]")
+{
+	const int N = 8;
+	// int number[N];
+	int number[N] = {17, 11, 3, 6, 1, 18, 5, 14};
+	int min, step;
+
+	// makeArray(number, N);
+	printArray(number, N);
+	mySort(number, N);
+	printArray(number, N);
+	REQUIRE(number[0] == 1);
+	REQUIRE(number[1] == 3);
+	REQUIRE(number[2] == 5);
+	REQUIRE(number[3] == 6);
+	REQUIRE(number[4] == 11);
+	REQUIRE(number[5] == 14);
+	REQUIRE(number[6] == 17);
+	REQUIRE(number[7] == 18);
 }

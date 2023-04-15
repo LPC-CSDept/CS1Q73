@@ -3,13 +3,10 @@
 int main()
 {
 	const int N = 8;
-	// int number[N];
-	int number[N] = {17, 11, 3, 6, 1, 18, 5, 14};
-	int min;
+	int numbers[N] = {25, 5, 10, 15, 30, 35, 50, 45};
 
-	// makeArray(number, N);
-	printArray(number, N);
-	min = findMin(number, N);
-	printArray(number, N);
-	cout << "Min value is : " << min << endl;
+	// makeArray(numbers, N);
+	printArray(numbers, N);
+	mySort(numbers, N);
+	printArray(numbers, N);
 }

@@ -6,24 +6,24 @@ using namespace std;
 
 void makeArray(int[], int);
 void printArray(int[], int);
-int findMin(int[], int);
-void compareTwo(int[], int, int);
+void findMin(int[], int, int);
+void mySort(int[], int);
 
-int findMin(int number[], int N)
+void findMin(int numbers[], int N, int index)
 {
 }
-void compareTwo(int number[], int N, int step)
+void mySort(int numbers[], int N)
 {
 }
-void makeArray(int number[], int N)
+void makeArray(int numbers[], int N)
 {
 	srand(time(0));
 	for (int i = 0; i < N; i++)
-		number[i] = rand() % 20;
+		numbers[i] = rand() % 10;
 }
-void printArray(int number[], int N)
+void printArray(int numbers[], int N)
 {
 	for (int i = 0; i < N; i++)
-		cout << number[i] << "\t";
+		cout << numbers[i] << "\t";
 	cout << endl;
 }
